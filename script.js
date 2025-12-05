@@ -3,7 +3,7 @@ const initialData = {
     hero: {
         title: "Selamat Datang di Desa Lobu",
         subtitle: "Menikmati Keindahan Alam, Sejarah, dan Kearifan Lokal.",
-        image: "/img/soputan3.png"
+        image: "img/soputan3.png"
     },
     sejarah: {
         title: "Sejarah Desa Lobu",
@@ -397,3 +397,4 @@ document.getElementById('year').innerText = new Date().getFullYear();
 // Render halaman pertama kali
 
 renderPage();
+
