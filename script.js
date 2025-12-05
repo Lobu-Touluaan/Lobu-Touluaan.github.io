@@ -3,17 +3,17 @@ const initialData = {
     hero: {
         title: "Selamat Datang di Desa Lobu",
         subtitle: "Menikmati Keindahan Alam, Sejarah, dan Kearifan Lokal.",
-        image: "https://images.unsplash.com/photo-1506152983158-b4a74a01c721?q=80&w=1473&auto=format&fit=crop"
+        image: "C:/KKT 145/web desa - Copy/img/soputan3.png"
     },
     sejarah: {
         title: "Sejarah Desa Lobu",
         content: "Desa Lobu didirikan pada tahun 1920 oleh para leluhur yang membuka lahan pertanian di lembah subur ini. Nama 'Lobu' diambil dari bahasa lokal yang berarti 'Lumbung'. Seiring berjalannya waktu, Desa Lobu berkembang dari pemukiman petani sederhana menjadi desa wisata yang menjunjung tinggi adat istiadat.",
-        image: "https://images.unsplash.com/photo-1516216628859-9bccecab13ca?q=80&w=1469&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1470&auto=format&fit=crop"
     },
     wisata: [
         { id: 1, title: "Air Terjun Lobu Asri", desc: "Air terjun setinggi 20 meter dengan kolam alami yang jernih.", image: "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?q=80&w=1470&auto=format&fit=crop" },
         { id: 2, title: "Bukit Pandang Senja", desc: "Spot terbaik untuk melihat matahari terbenam dan hamparan sawah.", image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1470&auto=format&fit=crop" },
-        { id: 3, title: "Kampung Budaya Tua", desc: "Area pelestarian rumah adat dan kerajinan tangan warga lokal.", image: "https://images.unsplash.com/photo-1596401057633-565652ca65a0?q=80&w=1470&auto=format&fit=crop" }
+        { id: 3, title: "Kampung Budaya Tua", desc: "Area pelestarian rumah adat dan kerajinan tangan warga lokal.", image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1470&auto=format&fit=crop" }
     ],
     komoditas: [
         { id: 1, title: "Kopi Robusta Lobu", desc: "Kopi dengan cita rasa khas tanah vulkanik, dipetik merah.", icon: "coffee" },
