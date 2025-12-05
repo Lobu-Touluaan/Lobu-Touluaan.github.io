@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desa Lobu - Profil Desa Wisata</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        
+        /* Animasi Transisi Halaman */
+        .fade-in { animation: fadeIn 0.5s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* LOGIKA ADMIN: Sembunyikan elemen .admin-only secara default */
+        .admin-only { display: none !important; }
+        
+        /* Jika body punya class 'admin-active', tampilkan elemen .admin-only */
+        body.admin-active .admin-only { display: inline-flex !important; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <i data-lucide="map" class="h-8 w-8 text-green-600 mr-2"></i>
+                    <span class="font-bold text-xl tracking-tight text-green-900">Desa Lobu</span>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-1">
+                    <button onclick="navigate('beranda')" class="nav-link px-3 py-2 rounded-md text-sm font-medium transition text-green-700 bg-green-50">Beranda</button>
+                    <button onclick="navigate('sejarah')" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-green-600 hover:bg-green-50 transition">Sejarah</button>
+                    <button onclick="navigate('wisata')" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-green-600 hover:bg-green-50 transition">Wisata</button>
+                    <button onclick="navigate('komoditas')" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-green-600 hover:bg-green-50 transition">Komoditas</button>
+                    <button onclick="navigate('kontak')" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-green-600 hover:bg-green-50 transition">Kontak</button>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-2">
+                    <button onclick="openAddAdminModal()" class="admin-only bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-md text-sm font-medium flex items-center gap-2 transition">
+                        <i data-lucide="user-plus" class="h-4 w-4"></i> Tambah Admin
+                    </button>
+                    
+                </div>
+
+                <div class="flex items-center md:hidden">
+                    <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="text-gray-600 hover:text-green-600 focus:outline-none">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 pb-4 px-4">
+            <div class="flex flex-col space-y-2 mt-2">
+                <button onclick="navigate('beranda')" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-left text-green-700 bg-green-50">Beranda</button>
+                <button onclick="navigate('sejarah')" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-left text-gray-600 hover:bg-green-50">Sejarah</button>
+                <button onclick="navigate('wisata')" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-left text-gray-600 hover:bg-green-50">Wisata</button>
+                <button onclick="navigate('komoditas')" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-left text-gray-600 hover:bg-green-50">Komoditas</button>
+                <button onclick="navigate('kontak')" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-left text-gray-600 hover:bg-green-50">Kontak</button>
+                <hr>
+                <button onclick="toggleAdminMode()" class="block w-full text-left px-3 py-2 text-sm text-red-600 font-bold">Admin Panel</button>
+                <button onclick="openAddAdminModal()" class="admin-only block w-full text-left px-3 py-2 text-sm text-blue-600 font-bold">Tambah Admin Baru</button>
+            </div>
+        </div>
+    </nav>
+
+    <main id="app-content" class="flex-grow">
+        </main>
+
+    <footer class="bg-gray-800 text-white py-8 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="mb-2">Desa Lobu - Kecamatan Alami, Kabupaten Sejahtera.</p>
+            <p class="text-gray-400 text-sm">&copy; <span id="year"></span> Pemerintah Desa Lobu. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="login-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center backdrop-blur-sm">
+        <div class="bg-white rounded-xl shadow-2xl p-6 w-full max-w-sm mx-4 transform transition-all scale-100">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-xl font-bold text-gray-800">Login Admin</h3>
+                <button onclick="closeLoginModal()" class="text-gray-400 hover:text-gray-600"><i data-lucide="x" class="h-5 w-5"></i></button>
+            </div>
+            <div class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Username</label>
+                    <input type="text" id="login-user" class="mt-1 w-full rounded-md border-gray-300 shadow-sm border p-2 focus:ring-green-500 focus:border-green-500" placeholder="admin">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Password</label>
+                    <input type="password" id="login-pass" class="mt-1 w-full rounded-md border-gray-300 shadow-sm border p-2 focus:ring-green-500 focus:border-green-500" placeholder="123">
+                </div>
+                <button onclick="processLogin()" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-md transition">Masuk</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="add-admin-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center backdrop-blur-sm">
+        <div class="bg-white rounded-xl shadow-2xl p-6 w-full max-w-sm mx-4 border-t-4 border-blue-500">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-xl font-bold text-gray-800">Tambah Admin Baru</h3>
+                <button onclick="closeAddAdminModal()" class="text-gray-400 hover:text-gray-600"><i data-lucide="x" class="h-5 w-5"></i></button>
+            </div>
+            <p class="text-sm text-gray-500 mb-4">Buat akun admin tambahan untuk mengelola konten.</p>
+            <div class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Username Baru</label>
+                    <input type="text" id="new-admin-user" class="mt-1 w-full rounded-md border-gray-300 shadow-sm border p-2 focus:ring-blue-500 focus:border-blue-500">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Password Baru</label>
+                    <input type="password" id="new-admin-pass" class="mt-1 w-full rounded-md border-gray-300 shadow-sm border p-2 focus:ring-blue-500 focus:border-blue-500">
+                </div>
+                <button onclick="addNewAdmin()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md transition">Simpan Admin</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="edit-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center backdrop-blur-sm">
+        <div class="bg-white rounded-xl shadow-2xl p-6 w-full max-w-lg mx-4">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Edit Konten</h3>
+            <div class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Judul / Nama</label>
+                    <input type="text" id="modal-title" class="mt-1 w-full rounded-md border-gray-300 shadow-sm border p-2 focus:ring-green-500 focus:border-green-500">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Deskripsi / Konten</label>
+                    <textarea id="modal-desc" rows="4" class="mt-1 w-full rounded-md border-gray-300 shadow-sm border p-2 focus:ring-green-500 focus:border-green-500"></textarea>
+                </div>
+                <div class="flex justify-end space-x-3 pt-2">
+                    <button onclick="closeModal()" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded-md transition">Batal</button>
+                    <button onclick="saveChanges()" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-md transition">Simpan Perubahan</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script> 
+</body>
+</html>

@@ -1,0 +1,37 @@
+/* 1. Pengaturan Font Utama */
+body { 
+    font-family: 'Inter', sans-serif; 
+}
+
+/* 2. Animasi Fade In (Untuk pergantian halaman) */
+.fade-in { 
+    animation: fadeIn 0.4s ease-in-out; 
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 3. Animasi Bounce In (YANG SEBELUMNYA HILANG)
+   Ini agar Modal Login/Edit muncul dengan efek "membal" yang halus */
+.animate-bounce-in {
+    animation: bounceIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* 4. Logika Mode Admin 
+   Membaca: "Jika body TIDAK punya class admin-active, sembunyikan elemen .admin-only" */
+body:not(.admin-active) .admin-only { 
+    display: none !important; 
+}
