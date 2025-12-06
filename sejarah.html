@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beranda - Desa Lobu</title>
+    <title>Sejarah - Desa Lobu</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -19,25 +19,23 @@
                     <span class="font-bold text-xl tracking-tight text-green-900">Desa Lobu</span>
                 </div>
                 <div class="hidden md:flex items-center space-x-1">
-                    <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium transition text-green-700 bg-green-50">Beranda</a>
+                    <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-green-600 hover:bg-green-50 transition">Beranda</a>
                     <a href="profil.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-green-600 hover:bg-green-50 transition">Profil</a>
-                    <a href="sejarah.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-green-600 hover:bg-green-50 transition">Sejarah</a>
+                    <a href="sejarah.html" class="px-3 py-2 rounded-md text-sm font-medium text-green-700 bg-green-50 transition">Sejarah</a>
                     <a href="wisata.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-green-600 hover:bg-green-50 transition">Wisata</a>
                     <a href="komoditas.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-green-600 hover:bg-green-50 transition">Komoditas</a>
                     <a href="kontak.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-green-600 hover:bg-green-50 transition">Kontak</a>
                 </div>
                 <div class="flex items-center md:hidden">
-                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-green-600 focus:outline-none">
-                        <i data-lucide="menu" class="h-6 w-6"></i>
-                    </button>
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-green-600 focus:outline-none"><i data-lucide="menu" class="h-6 w-6"></i></button>
                 </div>
             </div>
         </div>
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 pb-4 px-4">
             <div class="flex flex-col space-y-2 mt-2">
-                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-green-700 bg-green-50">Beranda</a>
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-green-50">Beranda</a>
                 <a href="profil.html" class="block px-3 py-2 rounded-md text-base font-medium text-green-700 bg-green-50">profil</a>
-                <a href="sejarah.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-green-50">Sejarah</a>
+                <a href="sejarah.html" class="block px-3 py-2 rounded-md text-base font-medium text-green-700 bg-green-50">Sejarah</a>
                 <a href="wisata.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-green-50">Wisata</a>
                 <a href="komoditas.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-green-50">Komoditas</a>
                 <a href="kontak.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-green-50">Kontak</a>
@@ -45,34 +43,20 @@
         </div>
     </nav>
 
-    <main class="flex-grow fade-in">
-        <div class="relative h-[500px] flex items-center justify-center text-center text-white">
-            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1632&auto=format&fit=crop')">
-                <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+    <main class="flex-grow fade-in max-w-7xl mx-auto px-4 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="relative">
+                <img src="https://images.unsplash.com/photo-1518182170546-0766ce6fec56?q=80&w=1470&auto=format&fit=crop" class="rounded-lg shadow-xl w-full h-96 object-cover">
+                <div class="absolute -bottom-6 -right-6 bg-yellow-100 p-4 rounded-lg shadow-lg hidden md:block border-2 border-white">
+                    <p class="text-yellow-800 font-bold text-xl">Est. 1920</p>
+                </div>
             </div>
-            <div class="relative z-10 px-4 max-w-4xl mx-auto">
-                <h1 class="text-4xl md:text-6xl font-bold mb-4 drop-shadow-md">Selamat Datang di Desa Lobu</h1>
-                <p class="text-xl md:text-2xl mb-8 font-light drop-shadow-md block">Menikmati Keindahan Alam, Sejarah, dan Kearifan Lokal.</p>
-                <a href="wisata.html" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition transform hover:scale-105 shadow-lg inline-block">Jelajahi Desa</a>
-            </div>
-        </div>
-        <div class="bg-white py-12">
-            <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                <div class="p-6 bg-green-50 rounded-xl">
-                    <i data-lucide="mountain" class="h-10 w-10 text-green-600 mx-auto mb-4"></i>
-                    <h3 class="text-lg font-bold mb-2">Alam Asri</h3>
-                    <p class="text-gray-600">Udara sejuk dan pemandangan hijau.</p>
-                </div>
-                <div class="p-6 bg-green-50 rounded-xl">
-                    <i data-lucide="history" class="h-10 w-10 text-green-600 mx-auto mb-4"></i>
-                    <h3 class="text-lg font-bold mb-2">Kaya Sejarah</h3>
-                    <p class="text-gray-600">Nilai historis yang dijaga turun-temurun.</p>
-                </div>
-                <div class="p-6 bg-green-50 rounded-xl">
-                    <i data-lucide="leaf" class="h-10 w-10 text-green-600 mx-auto mb-4"></i>
-                    <h3 class="text-lg font-bold mb-2">Tanah Subur</h3>
-                    <p class="text-gray-600">Hasil bumi melimpah kualitas unggul.</p>
-                </div>
+            <div>
+                <h2 class="text-3xl font-bold text-green-800 mb-6">Sejarah Desa Lobu</h2>
+                <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                    Desa Lobu didirikan pada tahun 1920 oleh para leluhur yang membuka lahan pertanian di lembah subur ini. Nama 'Lobu' diambil dari bahasa lokal yang berarti 'Lumbung'. Seiring berjalannya waktu, Desa Lobu berkembang dari pemukiman petani sederhana menjadi desa wisata yang menjunjung tinggi adat istiadat.
+                </p>
+                <div class="border-l-4 border-green-500 pl-4 italic text-gray-500">"Merawat masa lalu untuk masa depan."</div>
             </div>
         </div>
     </main>
@@ -83,7 +67,6 @@
             <p class="text-gray-400 text-sm">&copy; <span id="year"></span> Pemerintah Desa Lobu. All rights reserved.</p>
         </div>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisata - Desa Lobu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <i data-lucide="map" class="h-8 w-8 text-green-600 mr-2"></i>
+                    <span class="font-bold text-xl tracking-tight text-green-900">Desa Lobu</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-green-600 hover:bg-green-50 transition">Beranda</a>
+                    <a href="profil.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-green-600 hover:bg-green-50 transition">Profil</a>
+                    <a href="sejarah.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-green-600 hover:bg-green-50 transition">Sejarah</a>
+                    <a href="wisata.html" class="px-3 py-2 rounded-md text-sm font-medium text-green-700 bg-green-50 transition">Wisata</a>
+                    <a href="komoditas.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-green-600 hover:bg-green-50 transition">Komoditas</a>
+                    <a href="kontak.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-green-600 hover:bg-green-50 transition">Kontak</a>
+                </div>
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-green-600 focus:outline-none"><i data-lucide="menu" class="h-6 w-6"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 pb-4 px-4">
+            <div class="flex flex-col space-y-2 mt-2">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-green-50">Beranda</a>
+                <a href="profil.html" class="block px-3 py-2 rounded-md text-base font-medium text-green-700 bg-green-50">profil</a>
+                <a href="sejarah.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-green-50">Sejarah</a>
+                <a href="wisata.html" class="block px-3 py-2 rounded-md text-base font-medium text-green-700 bg-green-50">Wisata</a>
+                <a href="komoditas.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-green-50">Komoditas</a>
+                <a href="kontak.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-green-50">Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow fade-in bg-green-50 py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-green-800">Potensi Wisata</h2>
+                <p class="text-gray-600 mt-2">Destinasi favorit di Desa Lobu</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-2xl transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?q=80&w=1470&auto=format&fit=crop" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Air Terjun Lobu Asri</h3>
+                        <p class="text-gray-600 text-sm mb-4">Air terjun setinggi 20 meter dengan kolam alami yang jernih.</p>
+                        <button class="text-green-600 font-semibold text-sm flex items-center">Lihat Detail <i data-lucide="chevron-right" class="h-4 w-4 ml-1"></i></button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-2xl transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?q=80&w=1470&auto=format&fit=crop" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Bukit Pandang Senja</h3>
+                        <p class="text-gray-600 text-sm mb-4">Spot terbaik untuk melihat matahari terbenam dan hamparan sawah.</p>
+                        <button class="text-green-600 font-semibold text-sm flex items-center">Lihat Detail <i data-lucide="chevron-right" class="h-4 w-4 ml-1"></i></button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-2xl transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1533158388470-9a566995bf0c?q=80&w=1470&auto=format&fit=crop" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Kampung Budaya Tua</h3>
+                        <p class="text-gray-600 text-sm mb-4">Area pelestarian rumah adat dan kerajinan tangan warga lokal.</p>
+                        <button class="text-green-600 font-semibold text-sm flex items-center">Lihat Detail <i data-lucide="chevron-right" class="h-4 w-4 ml-1"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="mb-2">Desa Lobu - Kecamatan Alami, Kabupaten Sejahtera.</p>
+            <p class="text-gray-400 text-sm">&copy; <span id="year"></span> Pemerintah Desa Lobu. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beranda - Desa Lobu</title>
+    <title>Kontak - Desa Lobu</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -19,60 +19,50 @@
                     <span class="font-bold text-xl tracking-tight text-green-900">Desa Lobu</span>
                 </div>
                 <div class="hidden md:flex items-center space-x-1">
-                    <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium transition text-green-700 bg-green-50">Beranda</a>
+                    <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-green-600 hover:bg-green-50 transition">Beranda</a>
                     <a href="profil.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-green-600 hover:bg-green-50 transition">Profil</a>
                     <a href="sejarah.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-green-600 hover:bg-green-50 transition">Sejarah</a>
                     <a href="wisata.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-green-600 hover:bg-green-50 transition">Wisata</a>
                     <a href="komoditas.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-green-600 hover:bg-green-50 transition">Komoditas</a>
-                    <a href="kontak.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-green-600 hover:bg-green-50 transition">Kontak</a>
+                    <a href="kontak.html" class="px-3 py-2 rounded-md text-sm font-medium text-green-700 bg-green-50 transition">Kontak</a>
                 </div>
                 <div class="flex items-center md:hidden">
-                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-green-600 focus:outline-none">
-                        <i data-lucide="menu" class="h-6 w-6"></i>
-                    </button>
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-green-600 focus:outline-none"><i data-lucide="menu" class="h-6 w-6"></i></button>
                 </div>
             </div>
         </div>
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 pb-4 px-4">
             <div class="flex flex-col space-y-2 mt-2">
-                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-green-700 bg-green-50">Beranda</a>
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-green-50">Beranda</a>
                 <a href="profil.html" class="block px-3 py-2 rounded-md text-base font-medium text-green-700 bg-green-50">profil</a>
                 <a href="sejarah.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-green-50">Sejarah</a>
                 <a href="wisata.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-green-50">Wisata</a>
                 <a href="komoditas.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-green-50">Komoditas</a>
-                <a href="kontak.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-green-50">Kontak</a>
+                <a href="kontak.html" class="block px-3 py-2 rounded-md text-base font-medium text-green-700 bg-green-50">Kontak</a>
             </div>
         </div>
     </nav>
 
-    <main class="flex-grow fade-in">
-        <div class="relative h-[500px] flex items-center justify-center text-center text-white">
-            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1632&auto=format&fit=crop')">
-                <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+    <main class="flex-grow fade-in max-w-4xl mx-auto px-4 py-16">
+        <h2 class="text-3xl font-bold text-center text-green-800 mb-10">Hubungi Kami</h2>
+        <div class="bg-white shadow-xl rounded-2xl overflow-hidden flex flex-col md:flex-row">
+            <div class="bg-green-700 p-8 text-white md:w-1/3">
+                <h3 class="text-xl font-bold mb-6">Kantor Desa</h3>
+                <div class="space-y-6">
+                    <div class="flex items-start"><i data-lucide="map-pin" class="h-5 w-5 mr-3 mt-1"></i><p class="text-sm">Jl. Raya Desa Lobu No. 1</p></div>
+                    <div class="flex items-center"><i data-lucide="phone" class="h-5 w-5 mr-3"></i><p class="text-sm">+62 812 3456 7890</p></div>
+                    <div class="flex items-center"><i data-lucide="mail" class="h-5 w-5 mr-3"></i><p class="text-sm">admin@desalobu.id</p></div>
+                </div>
             </div>
-            <div class="relative z-10 px-4 max-w-4xl mx-auto">
-                <h1 class="text-4xl md:text-6xl font-bold mb-4 drop-shadow-md">Selamat Datang di Desa Lobu</h1>
-                <p class="text-xl md:text-2xl mb-8 font-light drop-shadow-md block">Menikmati Keindahan Alam, Sejarah, dan Kearifan Lokal.</p>
-                <a href="wisata.html" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition transform hover:scale-105 shadow-lg inline-block">Jelajahi Desa</a>
-            </div>
-        </div>
-        <div class="bg-white py-12">
-            <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                <div class="p-6 bg-green-50 rounded-xl">
-                    <i data-lucide="mountain" class="h-10 w-10 text-green-600 mx-auto mb-4"></i>
-                    <h3 class="text-lg font-bold mb-2">Alam Asri</h3>
-                    <p class="text-gray-600">Udara sejuk dan pemandangan hijau.</p>
-                </div>
-                <div class="p-6 bg-green-50 rounded-xl">
-                    <i data-lucide="history" class="h-10 w-10 text-green-600 mx-auto mb-4"></i>
-                    <h3 class="text-lg font-bold mb-2">Kaya Sejarah</h3>
-                    <p class="text-gray-600">Nilai historis yang dijaga turun-temurun.</p>
-                </div>
-                <div class="p-6 bg-green-50 rounded-xl">
-                    <i data-lucide="leaf" class="h-10 w-10 text-green-600 mx-auto mb-4"></i>
-                    <h3 class="text-lg font-bold mb-2">Tanah Subur</h3>
-                    <p class="text-gray-600">Hasil bumi melimpah kualitas unggul.</p>
-                </div>
+            <div class="p-8 md:w-2/3">
+                <form onsubmit="event.preventDefault(); alert('Pesan terkirim!');" class="space-y-4">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div><label class="text-sm font-medium">Nama</label><input type="text" class="mt-1 w-full rounded border-gray-300 border p-2 bg-gray-50"></div>
+                        <div><label class="text-sm font-medium">Email</label><input type="email" class="mt-1 w-full rounded border-gray-300 border p-2 bg-gray-50"></div>
+                    </div>
+                    <div><label class="text-sm font-medium">Pesan</label><textarea class="mt-1 w-full rounded border-gray-300 border p-2 bg-gray-50 h-32"></textarea></div>
+                    <button class="w-full bg-green-600 text-white font-bold py-2 rounded hover:bg-green-700 transition">Kirim Pesan</button>
+                </form>
             </div>
         </div>
     </main>
@@ -83,7 +73,6 @@
             <p class="text-gray-400 text-sm">&copy; <span id="year"></span> Pemerintah Desa Lobu. All rights reserved.</p>
         </div>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>
