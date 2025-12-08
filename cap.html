@@ -46,17 +46,24 @@
     <main class="flex-grow fade-in max-w-7xl mx-auto px-4 py-16">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div class="relative">
-                <img src="https://images.unsplash.com/photo-1518182170546-0766ce6fec56?q=80&w=1470&auto=format&fit=crop" class="rounded-lg shadow-xl w-full h-96 object-cover">
-                <div class="absolute -bottom-6 -right-6 bg-yellow-100 p-4 rounded-lg shadow-lg hidden md:block border-2 border-white">
-                    <p class="text-yellow-800 font-bold text-xl">Est. 1920</p>
-                </div>
+                <video 
+                    width="320" 
+                    height="240" 
+                    controls 
+                    controlsList="nodownload" 
+                    oncontextmenu="return false;" 
+                    class="rounded-lg shadow-xl w-full object-cover" 
+                    autoplay>
+                    <source src="media/cap.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
             <div>
-                <h2 class="text-3xl font-bold text-green-800 mb-6">Sejarah Desa Lobu</h2>
+                <h2 class="text-3xl font-bold text-green-800 mb-6">Cap Tikus</h2>
                 <p class="text-gray-600 text-lg leading-relaxed mb-6">
-                    Desa Lobu didirikan pada tahun 1920 oleh para leluhur yang membuka lahan pertanian di lembah subur ini. Nama 'Lobu' diambil dari bahasa lokal yang berarti 'Lumbung'. Seiring berjalannya waktu, Desa Lobu berkembang dari pemukiman petani sederhana menjadi desa wisata yang menjunjung tinggi adat istiadat.
-                </p>
-                <div class="border-l-4 border-green-500 pl-4 italic text-gray-500">"Merawat masa lalu untuk masa depan."</div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem fugit sed delectus aliquid quisquam illo, quos autem commodi beatae tempore.
+                <div class="border-l-4 border-green-500 pl-4 italic text-gray-500 mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                <button class="text-green-800 font-semibold text-sm flex items-center"><a href="komoditas.html">Kembali</a> <i data-lucide="chevron-right" class="h-4 w-4 ml-1"></i></button>
             </div>
         </div>
     </main>

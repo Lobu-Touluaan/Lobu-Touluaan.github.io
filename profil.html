@@ -20,7 +20,7 @@
                 </div>
                 <div class="hidden md:flex items-center space-x-1">
                     <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-green-600 hover:bg-green-50 transition">Beranda</a>
-                    <a href="profil.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-green-600 hover:bg-green-50 transition">Profil</a>
+                    <a href="profil.html" class="px-3 py-2 rounded-md text-sm font-medium text-green-700 bg-green-50 transition">Profil</a>
                     <a href="sejarah.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-green-600 hover:bg-green-50 transition">Sejarah</a>
                     <a href="wisata.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-green-600 hover:bg-green-50 transition">Wisata</a>
                     <a href="komoditas.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-green-600 hover:bg-green-50 transition">Komoditas</a>
@@ -36,7 +36,7 @@
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 pb-4 px-4">
             <div class="flex flex-col space-y-2 mt-2">
                 <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-green-50">Beranda</a>
-                <a href="profil.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-green-50">Profil</a>
+                <a href="profil.html" class="block px-3 py-2 rounded-md text-base font-medium text-green-700 bg-green-50">Profil</a>
                 <a href="sejarah.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-green-50">Sejarah</a>
                 <a href="wisata.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-green-50">Wisata</a>
                 <a href="komoditas.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-green-50">Komoditas</a>
@@ -106,9 +106,57 @@
                 </div>
                 <div class="flex justify-between items-center text-sm text-gray-600 px-4">
                     <div class="flex items-center"><i data-lucide="user" class="w-4 h-4 mr-1"></i> Laki-laki: <span class="font-bold ml-1">470</span></div>
-                    <div class="h-4 w-px bg-gray-300"></div>
+                    <div class="h-5 w-px bg-gray-300"></div> 
                     <div class="flex items-center"><i data-lucide="user" class="w-4 h-4 mr-1"></i> Perempuan: <span class="font-bold ml-1">468</span></div>
                 </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-md p-8 border border-gray-200">
+                <h3 class="text-xl font-bold text-gray-800 mb-6 flex items-center">
+                    <i data-lucide="building-2" class="mr-2 text-gray-600"></i> Fasilitas Desa
+                </h3>
+                <ul class="space-y-5">
+                    <li class="flex items-start">
+                        <div class="bg-orange-100 p-2 rounded-md mr-3 shrink-0">
+                            <i data-lucide="graduation-cap" class="w-5 h-5 text-orange-600"></i>
+                        </div>
+                        <div class="flex-1">
+                            <span class="block font-bold text-gray-800 mb-1">Pendidikan</span>
+                            <div class="flex gap-2">
+                                <span class="text-xs bg-orange-50 text-orange-700 px-2 py-1 rounded-md border border-orange-200">
+                                    <b>1</b> TK
+                                </span>
+                                <span class="text-xs bg-orange-50 text-orange-700 px-2 py-1 rounded-md border border-orange-200">
+                                    <b>2</b> SD
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="flex items-start">
+                        <div class="bg-red-100 p-2 rounded-md mr-3 shrink-0">
+                            <i data-lucide="heart-pulse" class="w-5 h-5 text-red-600"></i>
+                        </div>
+                        <div class="flex-1">
+                            <span class="block font-bold text-gray-800 mb-1">Kesehatan</span>
+                            <span class="text-xs bg-red-50 text-red-700 px-2 py-1 rounded-md border border-red-200 inline-block">
+                                <b>1</b> Polindes
+                            </span>
+                        </div>
+                    </li>
+
+                    <li class="flex items-start">
+                        <div class="bg-blue-100 p-2 rounded-md mr-3 shrink-0">
+                            <i data-lucide="church" class="w-5 h-5 text-blue-600"></i>
+                        </div>
+                        <div class="flex-1">
+                            <span class="block font-bold text-gray-800 mb-1">Peribadatan</span>
+                            <span class="text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded-md border border-blue-200 inline-block">
+                                <b>3</b> Gereja
+                            </span>
+                        </div>
+                    </li>
+                </ul>
             </div>
 
             <div class="bg-white rounded-xl shadow-md p-8 border-t-4 border-purple-500">
@@ -177,53 +225,17 @@
                     </div>
                 </div>
             </div>
-
-            <div class="bg-white rounded-xl shadow-md p-8 border border-gray-200">
-                <h3 class="text-xl font-bold text-gray-800 mb-6 flex items-center">
-                    <i data-lucide="building-2" class="mr-2 text-gray-600"></i> Fasilitas Desa
-                </h3>
-                <ul class="space-y-4">
-                    <li class="flex items-start">
-                        <div class="bg-orange-100 p-2 rounded-md mr-3">
-                            <i data-lucide="graduation-cap" class="w-5 h-5 text-orange-600"></i>
-                        </div>
-                        <div>
-                            <span class="block font-bold text-gray-800">Pendidikan</span>
-                            <span class="text-sm text-gray-600">1 TK & 2 Sekolah Dasar (SD)</span>
-                        </div>
-                    </li>
-                    <li class="flex items-start">
-                        <div class="bg-red-100 p-2 rounded-md mr-3">
-                            <i data-lucide="heart-pulse" class="w-5 h-5 text-red-600"></i>
-                        </div>
-                        <div>
-                            <span class="block font-bold text-gray-800">Kesehatan</span>
-                            <span class="text-sm text-gray-600">1 Polindes</span>
-                        </div>
-                    </li>
-                    <li class="flex items-start">
-                        <div class="bg-blue-100 p-2 rounded-md mr-3">
-                            <i data-lucide="church" class="w-5 h-5 text-blue-600"></i>
-                        </div>
-                        <div>
-                            <span class="block font-bold text-gray-800">Peribadatan</span>
-                            <span class="text-sm text-gray-600">3 Bangunan Gereja</span>
-                        </div>
-                    </li>
-                </ul>
-            </div>
         </div>
 
     </main>
 
     <footer class="bg-gray-800 text-white py-8 mt-auto">
         <div class="max-w-7xl mx-auto px-4 text-center">
-            <p class="mb-2">Desa Lobu - Kecamatan Alami, Kabupaten Sejahtera.</p>
+            <p class="mb-2 font-medium">Desa Lobu - Kecamatan Touluaan, Kabupaten Minahasa Tenggara</p>
             <p class="text-gray-400 text-sm">&copy; <span id="year"></span> Pemerintah Desa Lobu. All rights reserved.</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
-
 </html>
