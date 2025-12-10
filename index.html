@@ -46,16 +46,27 @@
     </nav>
 
     <main class="flex-grow fade-in">
-        <div class="relative h-[500px] flex items-center justify-center text-center text-white">
+        <div class="relative h-[500px] flex items-center justify-center text-center text-white overflow-hidden">
+            
             <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('media/soputan3.png')">
                 <div class="absolute inset-0 bg-black bg-opacity-40"></div>
             </div>
+
+            <div class="absolute top-4 left-4 md:top-8 md:left-8 z-20">
+                <img src="media/mitra.png" alt="Logo Kiri" class="h-12 md:h-20 w-auto object-contain drop-shadow-lg">
+            </div>
+
+            <div class="absolute top-4 right-4 md:top-8 md:right-8 z-20">
+                <img src="media/unsrat.png" alt="Logo Kanan" class="h-12 md:h-20 w-auto object-contain drop-shadow-lg">
+            </div>
+
             <div class="relative z-10 px-4 max-w-4xl mx-auto">
                 <h1 class="text-4xl md:text-6xl font-bold mb-4 drop-shadow-md">Selamat Datang di Desa Lobu</h1>
                 <p class="text-xl md:text-2xl mb-8 font-light drop-shadow-md block">Menikmati Keindahan Alam, Sejarah, dan Kearifan Lokal.</p>
                 <a href="wisata.html" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition transform hover:scale-105 shadow-lg inline-block">Jelajahi Desa</a>
             </div>
         </div>
+
         <div class="bg-white py-12">
             <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                 <div class="p-6 bg-green-50 rounded-xl">
@@ -80,10 +91,11 @@
     <footer class="bg-gray-800 text-white py-8 mt-auto">
         <div class="max-w-7xl mx-auto px-4 text-center">
             <p class="mb-2">Desa Lobu - Kecamatan Touluaan, Kabupaten Minahasa Tenggara.</p>
-            <p class="text-gray-400 text-sm">&copy; <span id="year"></span> Pemerintah Desa Lobu. All rights reserved.</p>
+            <p class="text-gray-400 text-sm">&copy; 2025 KKT UNSRAT 145</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>
