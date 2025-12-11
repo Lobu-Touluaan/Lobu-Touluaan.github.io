@@ -9,88 +9,124 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen font-inter">
 
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
-                    <i data-lucide="map" class="h-8 w-8 text-green-600 mr-2"></i>
-                    <span class="font-bold text-xl tracking-tight text-green-900">Desa Lobu</span>
+                    <a href="index.html" class="flex items-center">
+                        <i data-lucide="map" class="h-8 w-8 text-green-600 mr-2"></i>
+                        <span class="font-bold text-xl tracking-tight text-green-900">Desa Lobu</span>
+                    </a>
                 </div>
+
                 <div class="hidden md:flex items-center space-x-1">
                     <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-green-600 hover:bg-green-50 transition">Beranda</a>
                     <a href="profil.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-green-600 hover:bg-green-50 transition">Profil</a>
                     <a href="sejarah.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-green-600 hover:bg-green-50 transition">Sejarah</a>
                     <a href="wisata.html" class="px-3 py-2 rounded-md text-sm font-medium text-green-700 bg-green-50 transition">Wisata</a>
                     <a href="komoditas.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-green-600 hover:bg-green-50 transition">Komoditas</a>
-                    <a href="kontak.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-green-600 hover:bg-green-50 transition">Kontak</a>
                 </div>
+
                 <div class="flex items-center md:hidden">
-                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-green-600 focus:outline-none"><i data-lucide="menu" class="h-6 w-6"></i></button>
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-green-600 focus:outline-none p-2">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
                 </div>
             </div>
         </div>
+
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 pb-4 px-4">
             <div class="flex flex-col space-y-2 mt-2">
-                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-green-50">Beranda</a>
-                <a href="profil.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-green-50">Profil</a>
-                <a href="sejarah.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-green-50">Sejarah</a>
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-green-50 hover:text-green-600">Beranda</a>
+                <a href="profil.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-green-50 hover:text-green-600">Profil</a>
+                <a href="sejarah.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-green-50 hover:text-green-600">Sejarah</a>
                 <a href="wisata.html" class="block px-3 py-2 rounded-md text-base font-medium text-green-700 bg-green-50">Wisata</a>
-                <a href="komoditas.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-green-50">Komoditas</a>
-                <a href="kontak.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-green-50">Kontak</a>
+                <a href="komoditas.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-green-50 hover:text-green-600">Komoditas</a>
             </div>
         </div>
     </nav>
 
-    <main class="flex-grow fade-in bg-green-50 py-16">
+    <main class="flex-grow fade-in bg-green-50/50 py-12 md:py-16">
         <div class="max-w-7xl mx-auto px-4">
+            
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-green-800">Potensi Wisata</h2>
-                <p class="text-gray-600 mt-2">Destinasi favorit di Desa Lobu</p>
+                <h1 class="text-3xl md:text-4xl font-bold text-green-900 mb-4">Destinasi Wisata Alam</h1>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">Menikmati keasrian alam dan kearifan lokal Desa Lobu yang mempesona.</p>
+                <div class="w-24 h-1 bg-green-500 mx-auto mt-6 rounded-full"></div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-2xl transition duration-300">
-                    <div class="h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?q=80&w=1470&auto=format&fit=crop" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-2xl transition duration-300 flex flex-col h-full border border-gray-100">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?q=80&w=1470&auto=format&fit=crop" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                        <div class="absolute top-3 right-3 bg-white/90 px-3 py-1 rounded-full text-xs font-bold text-green-700 shadow-sm">
+                            Alam
+                        </div>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Air Terjun Lobu Asri</h3>
-                        <p class="text-gray-600 text-sm mb-4">Air terjun setinggi 20 meter dengan kolam alami yang jernih.</p>
-                        <button class="text-green-600 font-semibold text-sm flex items-center">Lihat Detail <i data-lucide="chevron-right" class="h-4 w-4 ml-1"></i></button>
-                    </div>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-2xl transition duration-300">
-                    <div class="h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?q=80&w=1470&auto=format&fit=crop" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Bukit Pandang Senja</h3>
-                        <p class="text-gray-600 text-sm mb-4">Spot terbaik untuk melihat matahari terbenam dan hamparan sawah.</p>
-                        <button class="text-green-600 font-semibold text-sm flex items-center">Lihat Detail <i data-lucide="chevron-right" class="h-4 w-4 ml-1"></i></button>
-                    </div>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-2xl transition duration-300">
-                    <div class="h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1533158388470-9a566995bf0c?q=80&w=1470&auto=format&fit=crop" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Kampung Budaya Tua</h3>
-                        <p class="text-gray-600 text-sm mb-4">Area pelestarian rumah adat dan kerajinan tangan warga lokal.</p>
-                        <button class="text-green-600 font-semibold text-sm flex items-center">Lihat Detail <i data-lucide="chevron-right" class="h-4 w-4 ml-1"></i></button>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2 group-hover:text-green-700 transition">Air Terjun Lobu Asri</h3>
+                        <p class="text-gray-600 text-sm mb-4 flex-grow">Air terjun setinggi 20 meter dengan kolam alami yang jernih, cocok untuk relaksasi dan berenang.</p>
+                        <div class="border-t border-gray-100 pt-4 mt-auto">
+                            <button class="text-green-600 font-semibold text-sm flex items-center hover:translate-x-1 transition">
+                                Lihat Lokasi <i data-lucide="map-pin" class="h-4 w-4 ml-1"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-2xl transition duration-300 flex flex-col h-full border border-gray-100">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?q=80&w=1470&auto=format&fit=crop" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                        <div class="absolute top-3 right-3 bg-white/90 px-3 py-1 rounded-full text-xs font-bold text-green-700 shadow-sm">
+                            Pemandangan
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2 group-hover:text-green-700 transition">Bukit Pandang Senja</h3>
+                        <p class="text-gray-600 text-sm mb-4 flex-grow">Spot terbaik untuk melihat matahari terbenam dengan latar belakang hamparan sawah dan perkebunan kelapa.</p>
+                        <div class="border-t border-gray-100 pt-4 mt-auto">
+                            <button class="text-green-600 font-semibold text-sm flex items-center hover:translate-x-1 transition">
+                                Lihat Lokasi <i data-lucide="map-pin" class="h-4 w-4 ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-2xl transition duration-300 flex flex-col h-full border border-gray-100">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1533158388470-9a566995bf0c?q=80&w=1470&auto=format&fit=crop" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                        <div class="absolute top-3 right-3 bg-white/90 px-3 py-1 rounded-full text-xs font-bold text-green-700 shadow-sm">
+                            Budaya
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2 group-hover:text-green-700 transition">Kampung Budaya</h3>
+                        <p class="text-gray-600 text-sm mb-4 flex-grow">Area pelestarian rumah adat Minahasa dan pusat kerajinan tangan anyaman bambu warga lokal.</p>
+                        <div class="border-t border-gray-100 pt-4 mt-auto">
+                            <button class="text-green-600 font-semibold text-sm flex items-center hover:translate-x-1 transition">
+                                Lihat Lokasi <i data-lucide="map-pin" class="h-4 w-4 ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+
         </div>
     </main>
 
     <footer class="bg-gray-800 text-white py-8 mt-auto">
         <div class="max-w-7xl mx-auto px-4 text-center">
-            <p class="mb-2">Desa Lobu - Kecamatan Alami, Kabupaten Sejahtera.</p>
-            <p class="text-gray-400 text-sm">&copy; 2025 KKT UNSRAT 145</p>
+            <p class="mb-2 font-medium">Desa Lobu</p>
+            <p class="text-gray-400 text-sm mb-4">Kecamatan Touluaan, Kabupaten Minahasa Tenggara</p>
+            <hr class="border-gray-700 w-1/2 mx-auto mb-4">
+            <p class="text-gray-500 text-xs">&copy; 2025 KKT UNSRAT 145</p>
         </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
-
 </html>

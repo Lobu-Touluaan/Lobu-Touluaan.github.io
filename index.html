@@ -9,93 +9,142 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen font-inter">
 
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
-                    <i data-lucide="map" class="h-8 w-8 text-green-600 mr-2"></i>
-                    <span class="font-bold text-xl tracking-tight text-green-900">Desa Lobu</span>
+                    <a href="index.html" class="flex items-center">
+                        <i data-lucide="map" class="h-8 w-8 text-green-600 mr-2"></i>
+                        <span class="font-bold text-xl tracking-tight text-green-900">Desa Lobu</span>
+                    </a>
                 </div>
+
                 <div class="hidden md:flex items-center space-x-1">
                     <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium transition text-green-700 bg-green-50">Beranda</a>
                     <a href="profil.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-green-600 hover:bg-green-50 transition">Profil</a>
                     <a href="sejarah.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-green-600 hover:bg-green-50 transition">Sejarah</a>
                     <a href="wisata.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-green-600 hover:bg-green-50 transition">Wisata</a>
                     <a href="komoditas.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-green-600 hover:bg-green-50 transition">Komoditas</a>
-                    <a href="kontak.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-green-600 hover:bg-green-50 transition">Kontak</a>
                 </div>
+
                 <div class="flex items-center md:hidden">
-                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-green-600 focus:outline-none">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-green-600 focus:outline-none p-2">
                         <i data-lucide="menu" class="h-6 w-6"></i>
                     </button>
                 </div>
             </div>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 pb-4 px-4">
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 pb-4 px-4 transition-all duration-300 ease-in-out">
             <div class="flex flex-col space-y-2 mt-2">
                 <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-green-700 bg-green-50">Beranda</a>
-                <a href="profil.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-green-50">Profil</a>
-                <a href="sejarah.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-green-50">Sejarah</a>
-                <a href="wisata.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-green-50">Wisata</a>
-                <a href="komoditas.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-green-50">Komoditas</a>
-                <a href="kontak.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-green-50">Kontak</a>
+                <a href="profil.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-green-50 hover:text-green-600">Profil</a>
+                <a href="sejarah.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-green-50 hover:text-green-600">Sejarah</a>
+                <a href="wisata.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-green-50 hover:text-green-600">Wisata</a>
+                <a href="komoditas.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-green-50 hover:text-green-600">Komoditas</a>
             </div>
         </div>
     </nav>
 
     <main class="flex-grow fade-in">
         <div class="relative h-[500px] flex items-center justify-center text-center text-white overflow-hidden">
-            
-            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('media/soputan3.png')">
-                <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 hover:scale-105" style="background-image: url('media/soputan3.png')">
+                <div class="absolute inset-0 bg-black/50"></div> 
             </div>
 
             <div class="absolute top-4 left-4 md:top-8 md:left-8 z-20">
-                <img src="media/mitra.png" alt="Logo Kiri" class="h-12 md:h-20 w-auto object-contain drop-shadow-lg">
+                <img src="media/mitra.png" alt="Logo Mitra" class="h-10 md:h-20 w-auto object-contain drop-shadow-lg">
             </div>
 
             <div class="absolute top-4 right-4 md:top-8 md:right-8 z-20">
-                <img src="media/unsrat.png" alt="Logo Kanan" class="h-12 md:h-20 w-auto object-contain drop-shadow-lg">
+                <img src="media/unsrat.png" alt="Logo Unsrat" class="h-10 md:h-20 w-auto object-contain drop-shadow-lg">
             </div>
 
-            <div class="relative z-10 px-4 max-w-4xl mx-auto">
-                <h1 class="text-4xl md:text-6xl font-bold mb-4 drop-shadow-md">Selamat Datang di Desa Lobu</h1>
-                <p class="text-xl md:text-2xl mb-8 font-light drop-shadow-md block">Menikmati Keindahan Alam, Sejarah, dan Kearifan Lokal.</p>
-                <a href="wisata.html" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition transform hover:scale-105 shadow-lg inline-block">Jelajahi Desa</a>
+            <div class="relative z-10 px-4 max-w-4xl mx-auto pt-16 md:pt-0">
+                <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 drop-shadow-md leading-tight">Selamat Datang di <br class="md:hidden"> Desa Lobu</h1>
+                <p class="text-lg md:text-2xl mb-8 font-light drop-shadow-md max-w-2xl mx-auto">Menikmati Keindahan Alam, Sejarah, dan Kearifan Lokal.</p>
+                <a href="wisata.html" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition transform hover:scale-105 shadow-lg inline-block text-sm md:text-base">
+                    Jelajahi Desa
+                </a>
             </div>
         </div>
 
-        <div class="bg-white py-12">
-            <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                <div class="p-6 bg-green-50 rounded-xl">
-                    <i data-lucide="mountain" class="h-10 w-10 text-green-600 mx-auto mb-4"></i>
-                    <h3 class="text-lg font-bold mb-2">Alam Asri</h3>
-                    <p class="text-gray-600">Udara sejuk dan pemandangan hijau.</p>
+        <div class="bg-white py-12 md:py-16">
+            <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                <a href="profil.html" class="group h-full">
+                    <div class="p-6 bg-green-50 rounded-xl h-full transition transform hover:-translate-y-1 hover:shadow-lg border border-transparent hover:border-green-200">
+                        <i data-lucide="file-text" class="h-10 w-10 text-green-600 mx-auto mb-4 group-hover:scale-110 transition"></i>
+                        <h3 class="text-lg font-bold mb-2 text-green-900">Profil Desa</h3>
+                        <p class="text-gray-600 text-sm">Mengenal Desa Lobu.</p>
+                    </div>
+                </a>
+                <a href="wisata.html" class="group h-full">
+                    <div class="p-6 bg-green-50 rounded-xl h-full transition transform hover:-translate-y-1 hover:shadow-lg border border-transparent hover:border-green-200">
+                        <i data-lucide="mountain" class="h-10 w-10 text-green-600 mx-auto mb-4 group-hover:scale-110 transition"></i>
+                        <h3 class="text-lg font-bold mb-2 text-green-900">Wisata</h3>
+                        <p class="text-gray-600 text-sm">Udara dan pemandangan hijau yang asri.</p>
+                    </div>
+                </a>
+                <a href="sejarah.html" class="group h-full">
+                    <div class="p-6 bg-green-50 rounded-xl h-full transition transform hover:-translate-y-1 hover:shadow-lg border border-transparent hover:border-green-200">
+                        <i data-lucide="history" class="h-10 w-10 text-green-600 mx-auto mb-4 group-hover:scale-110 transition"></i>
+                        <h3 class="text-lg font-bold mb-2 text-green-900">Sejarah</h3>
+                        <p class="text-gray-600 text-sm">Nilai historis dan budaya yang dijaga turun-temurun.</p>
+                    </div>
+                </a>
+                <a href="komoditas.html" class="group h-full">
+                    <div class="p-6 bg-green-50 rounded-xl h-full transition transform hover:-translate-y-1 hover:shadow-lg border border-transparent hover:border-green-200">
+                        <i data-lucide="leaf" class="h-10 w-10 text-green-600 mx-auto mb-4 group-hover:scale-110 transition"></i>
+                        <h3 class="text-lg font-bold mb-2 text-green-900">Komoditas</h3>
+                        <p class="text-gray-600 text-sm">Hasil bumi melimpah dan berkualitas.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="bg-gray-100 py-16">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold text-green-900 mb-4 flex justify-center items-center">
+                        <i data-lucide="map-pin" class="mr-2 text-green-600"></i> Lokasi Desa
+                    </h2>
+                    <p class="text-gray-600">Peta wilayah Desa Lobu, Kecamatan Touluaan, Minahasa Tenggara.</p>
                 </div>
-                <div class="p-6 bg-green-50 rounded-xl">
-                    <i data-lucide="history" class="h-10 w-10 text-green-600 mx-auto mb-4"></i>
-                    <h3 class="text-lg font-bold mb-2">Kaya Sejarah</h3>
-                    <p class="text-gray-600">Nilai historis yang dijaga turun-temurun.</p>
+                
+                <div class="bg-white p-2 rounded-xl shadow-lg">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.137956684207!2d124.64759412504804!3d1.0581269989317115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32875228fb10ce89%3A0x9d3f6dae1454523c!2sLobu%2C%20Kec.%20Touluaan%2C%20Kabupaten%20Minahasa%20Tenggara%2C%20Sulawesi%20Utara!5e0!3m2!1sid!2sid!4v1765465134426!5m2!1sid!2sid" 
+                        width="600" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
-                <div class="p-6 bg-green-50 rounded-xl">
-                    <i data-lucide="leaf" class="h-10 w-10 text-green-600 mx-auto mb-4"></i>
-                    <h3 class="text-lg font-bold mb-2">Tanah Subur</h3>
-                    <p class="text-gray-600">Hasil bumi melimpah kualitas unggul.</p>
+                
+                <div class="mt-6 text-center">
+                    <a href="https://maps.google.com/maps?q=Desa+Lobu+Touluaan+Minahasa+Tenggara" 
+                       target="_blank" 
+                       class="inline-flex items-center text-green-700 font-semibold hover:text-green-900 transition">
+                        Buka di Google Maps <i data-lucide="external-link" class="ml-2 w-4 h-4"></i>
+                    </a>
                 </div>
             </div>
         </div>
+
     </main>
 
     <footer class="bg-gray-800 text-white py-8 mt-auto">
         <div class="max-w-7xl mx-auto px-4 text-center">
-            <p class="mb-2">Desa Lobu - Kecamatan Touluaan, Kabupaten Minahasa Tenggara.</p>
-            <p class="text-gray-400 text-sm">&copy; 2025 KKT UNSRAT 145</p>
+            <p class="mb-2 font-semibold">Desa Lobu</p>
+            <p class="text-gray-400 text-sm mb-4">Kecamatan Touluaan, Kabupaten Minahasa Tenggara</p>
+            <hr class="border-gray-700 w-1/2 mx-auto mb-4">
+            <p class="text-gray-500 text-xs">&copy; 2025 KKT UNSRAT 145</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
-
 </html>
